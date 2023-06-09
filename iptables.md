@@ -60,6 +60,7 @@
     tail -f /var/log/syslog | grep -i DANGER
     --------------------------------------------
     Extension module:
+    man iptables-extensions
     iptables -A INPUT -i enp0s3 -p icmp -m comment --comment "admin:hossein" -j DROP
     # limit connection from specified host
     iptables -A INPUT -i enp0s3 -p tcp -m connlimit --connlimit-above 2 -j DROP # more than 2 connections DROP
@@ -84,4 +85,7 @@
     iptables -A ssh_policy -i enp0s3 -p tcp -s 192.168.1.22 --dport 22 -j ACCEPT
     iptables -D ssh_policy 1
     iptables -X ssh_policy # run if don't have any rule in chain
+    --------------------------------------------
+    Example for server hardening:
+    
  
