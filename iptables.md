@@ -87,5 +87,6 @@
     iptables -X ssh_policy # run if don't have any rule in chain
     --------------------------------------------
     Example for server hardening:
-    
+        --------------------------------------------
+    NAT example:
  
